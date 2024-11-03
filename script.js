@@ -1,39 +1,81 @@
-// Language data for easy translation
-const languageContent = {
-    en: {
-        mainTitle: "Mind",
-        subTitle: "Moammer ALTobi",
-        sections: {
-            articlesArabic: "Articles in Arabic",
-            articlesEnglish: "Articles in English",
-            interviews: "TV and Radio Interviews",
-            consulting: "Consulting Services in AI and Digital Development",
-            training: "Training Services"
-        },
-        footer: "© Moammer ALTobi 2024"
-    },
-    ar: {
-        mainTitle: "عقل",
-        subTitle: "معمر التوبي",
-        sections: {
-            articlesArabic: "مقالات بالعربية",
-            articlesEnglish: "مقالات بالإنجليزية",
-            interviews: "المقابلات التلفزيونية والإذاعية",
-            consulting: "خدمات الاستشارات في الذكاء الاصطناعي والتطوير الرقمي",
-            training: "خدمات التدريب"
-        },
-        footer: "© معمر التوبي 2024"
-    }
-};
-
-// Function to change language dynamically
-function changeLanguage(lang) {
-    document.getElementById("main-title").textContent = languageContent[lang].mainTitle;
-    document.getElementById("sub-title").textContent = languageContent[lang].subTitle;
-    document.getElementById("section-articles-arabic").textContent = languageContent[lang].sections.articlesArabic;
-    document.getElementById("section-articles-english").textContent = languageContent[lang].sections.articlesEnglish;
-    document.getElementById("section-interviews").textContent = languageContent[lang].sections.interviews;
-    document.getElementById("section-consulting").textContent = languageContent[lang].sections.consulting;
-    document.getElementById("section-training").textContent = languageContent[lang].sections.training;
-    document.getElementById("footer-text").textContent = languageContent[lang].footer;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    direction: ltr; /* default direction */
 }
+
+header {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+#language-select {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#language-select button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#top-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+main {
+    padding: 20px;
+}
+
+main img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.rtl nav li {
+    float: right;
+}
+
